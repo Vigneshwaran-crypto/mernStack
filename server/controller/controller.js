@@ -3,7 +3,7 @@ import PostMessage from "../modals/postMessage.js";
 
 export const getPosts = async (req, res) => {
   try {
-    const postMessage = await PostMessage.find();
+    const postMessage = await PostMessage.find(); //get all the posts from the db
     console.log("Got postMsg from modal :", postMessage);
 
     res.status(200).json(postMessage);
